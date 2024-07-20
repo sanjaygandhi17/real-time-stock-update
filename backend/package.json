@@ -6,9 +6,9 @@
   "scripts": {
     "build": "tsc",
     "start:dev": "tsc-watch --onSuccess 'node --enable-source-maps ./dist/index.js'",
-    "start:stage": "tsc-watch --onSuccess 'node --enable-source-maps ./dist/index.js'",
-    "lint": "eslint . --ext .js,.ts",
+    "start:stage": "sh -c 'source config/stage.env && tsc-watch --onSuccess \"node --enable-source-maps ./dist/index.js\"'",
     "start": "node --enable-source-maps ./dist/index.js",
+    "lint": "eslint . --ext .js,.ts",
     "compile-openapi": "openapi-compiler --validate --rootFile ./api/index.yml --outputFile openapi.yml"
   },
   "repository": {
