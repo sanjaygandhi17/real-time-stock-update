@@ -1,0 +1,43 @@
+# Node.js dependencies
+/node_modules
+
+# Next.js build output
+/.next
+/out
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# TypeScript output
+*.tsbuildinfo
+
+# Mac system files
+.DS_Store
+
+# VS Code settings
+.vscode/
+
+# IDE specific files
+.idea/
+*.suo
+*.ntvs_analysis.dat
+*.njsproj
+*.sln
+*.sw?
+
+# Build output
+/build
+/dist
+
+# Coverage reports
+/coverage
+
+# dotenv environment variables file
+.env
