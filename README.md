@@ -42,7 +42,7 @@ A web application that provides real-time cryptocurrency price tracking. The app
    - Make sure MongoDB is running and accessible.
    - Set the `MONGODB_URI` environment variable to the MongoDB connection string.
    - Run `npm install` to install dependencies.
-   - Start the server with `npm start`.
+   - Start the server with `npm run start:stage`.
 
 ## Frontend Implementation
 
