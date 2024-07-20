@@ -1,0 +1,271 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #010101;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  max-width: 100%;
+  padding: 10px;
+  background-color: #000;
+  box-shadow: 0 0 10px #01cb81;
+  border-radius: 5px;
+  justify-content: space-between;
+  height: calc(100vh - 20px);
+}
+
+.topBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+}
+
+.heading {
+  color: #01cb81;
+  padding: 0 1.5%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.dataIngest {
+  color: #ffffff;
+}
+
+.change-button {
+  padding: 5px 10px;
+  font-size: 15px;
+  margin-bottom: 5px;
+  margin-right: 1.5%;
+  background-color: #01cb81;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.change-button:hover {
+  background-color: #31e163;
+}
+
+.price-table-container {
+  width: 55%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 5px;
+  table-layout: fixed;
+}
+
+.price-table th,
+.price-table td {
+  border: 1px solid #22ee41;
+  padding: 8px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.modal-content {
+  background-color: #000;
+  border: 1px solid #01cb81;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(1, 203, 129, 0.5);
+  transform: perspective(600px) rotateX(0deg);
+  animation: popIn 0.5s ease-in-out;
+  max-width: 400px;
+  width: 100%;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 20px;
+}
+
+.modal-header h2 {
+  color: #01cb81;
+  margin: 0;
+}
+
+.modal-header .close-button {
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.modal-header .close-button:hover {
+  background-color: #cc0000;
+}
+
+.modal-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-buttons button {
+  background-color: #01cb81;
+  color: #000;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+
+.modal-buttons button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px rgba(1, 203, 129, 0.5);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  0% {
+    transform: perspective(600px) rotateX(-30deg);
+    opacity: 0;
+  }
+  100% {
+    transform: perspective(600px) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+.columnName {
+  color: #0056b3;
+}
+
+@keyframes blink {
+  0% {
+    color: #01cb81;
+    opacity: 1;
+  }
+  50% {
+    color: #ffffff;
+    opacity: 0.5;
+  }
+  100% {
+    color: #01cb81;
+    opacity: 1;
+  }
+}
+
+.blink {
+  animation: blink 1s infinite;
+}
+
+
+/* Dashboard Styles */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #000;
+  color: #01cb81;
+  width: 40%;
+  height: calc(100vh - 20px);
+  margin-left: 10px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.dashboard .real-time-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #000;
+  border: 1px solid #01cb81;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  flex: 1;
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+.dashboard .real-time-price h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.dashboard .real-time-price .image-container {
+  position: relative;
+  width: 100%;
+  flex: 1;
+}
+
+.dashboard .real-time-price .price-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.dashboard .real-time-price p {
+  margin: 5px 0;
+  font-size: 20px;
+}
+
+.dashboard .line-chart {
+  width: 100%;
+  height: 50%;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
