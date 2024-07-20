@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "strictNullChecks": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "target": "es2019",
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "inlineSourceMap": true,
+    "outDir": "dist",
+    "skipLibCheck": true,
+    "lib": ["es2019"],
+    "typeRoots": ["node_modules/@types"],
+    "resolveJsonModule": true,
+    "pretty": true
+  },
+  "include": ["./**/*"],
+  "exclude": ["dist", "test", "node_modules"]
+}
