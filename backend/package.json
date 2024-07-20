@@ -1,0 +1,48 @@
+{
+  "name": "real time stock update",
+  "version": "1.0.0",
+  "description": "This store the real time stock prices",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start:dev": "tsc-watch --onSuccess 'node --enable-source-maps ./dist/index.js'",
+    "start:stage": "tsc-watch --onSuccess 'node --enable-source-maps ./dist/index.js'",
+    "lint": "eslint . --ext .js,.ts",
+    "start": "node --enable-source-maps ./dist/index.js",
+    "compile-openapi": "openapi-compiler --validate --rootFile ./api/index.yml --outputFile openapi.yml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/"
+  },
+  "author": "Sanjay Gandhi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/"
+  },
+  "engines": {
+    "node": ">=18.11.0"
+  },
+  "homepage": "https://github.com/",
+  "devDependencies": {
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.14",
+    "@types/node": "^18.11.12",
+    "got": "^11.8.6",
+    "tsc-watch": "^4.6.2",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.9.12",
+    "@types/connect-timeout": "^0.0.36",
+    "agentkeepalive": "^4.2.1",
+    "axios": "^1.7.2",
+    "connect-timeout": "^1.9.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-promise-router": "^4.1.1",
+    "helmet": "^4.6.0",
+    "http-status-codes": "^1.4.0",
+    "mongoose": "^8.5.1"
+  }
+}
