@@ -67,7 +67,7 @@ A web application that provides real-time cryptocurrency price tracking. The app
      ```bash
      cd backend
      npm install
-     npm start
+     npm run start:stage
      ```
 
 2. **Frontend**
